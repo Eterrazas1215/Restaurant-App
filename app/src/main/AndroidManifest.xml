@@ -48,6 +48,9 @@
             android:name=".foodmenu"
             android:exported="false" />
         <activity
+            android:name=".item_menu"
+            android:exported="false" />
+        <activity
             android:name=".cover_page"
             android:exported="true"
             android:label="@string/app_name"
