@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
 //Add database entity
-@Database(entities = {MainData.class, CustomerData.class,ImageData.class}, version = 3, exportSchema = false)
+@Database(entities = {MainData.class, CustomerData.class,ImageData.class, DessertData.class, AppetizerData.class, DrinksData.class}, version = 6, exportSchema = false)
 @TypeConverters({ImageBitmapString.class})
 public abstract class RoomDB extends RoomDatabase {
     //create database instance
@@ -37,5 +37,11 @@ public abstract class RoomDB extends RoomDatabase {
     public abstract CustomerDao customerDao();
     //create image dao
     public abstract ImageDao imageDao();
+    //create Dessert Dao
+    public abstract DessertDao dessertDao();
+    //create Appetizer Dao
+    public abstract AppetizerDao appetizerDao();
+    //create Drinks Dao
+    public abstract DrinksDao drinksDao();
 
 }

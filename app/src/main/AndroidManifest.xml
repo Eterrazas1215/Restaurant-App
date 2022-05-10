@@ -10,6 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RestaurantApp">
         <activity
+            android:name=".DrinksInsert"
+            android:exported="false"/>
+        <activity
+            android:name=".AppetizerInsert"
+            android:exported="false"/>
+        <activity android:name=".DatabaseMenuSelection"
+            android:exported="false"/>
+        <activity
+            android:name=".DessertInsert"
+            android:exported="false"/>
+        <activity
             android:name=".ImageAdapter"
             android:exported="false"/>
         <activity

@@ -81,7 +81,7 @@ public class login extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Intent intent = new Intent(login.this, NewInsertMenu.class);
+                    Intent intent = new Intent(login.this, DatabaseMenuSelection.class);
                     startActivity(intent);
                 }
                 else{
