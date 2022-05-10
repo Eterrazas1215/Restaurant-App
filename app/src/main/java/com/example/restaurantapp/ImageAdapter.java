@@ -70,7 +70,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.MyViewHolder
     static class MyViewHolder extends RecyclerView.ViewHolder
     {
         ImageView imageView;
-        Button btnDelete;
+        Button btnDelete, btnReset;
 
         public MyViewHolder(@NonNull View itemView)
         {

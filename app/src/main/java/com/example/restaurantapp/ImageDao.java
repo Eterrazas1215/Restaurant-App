@@ -23,9 +23,9 @@ public interface ImageDao {
     @Query("UPDATE images SET text = :sText WHERE ID = :sID ")
     void update(int sID, String sText);
 
-//    //Delete Query Images
-//    @Query("Delete From Images")
-//    List<ImageData>deleteAllImages();
+    //Delete all Query
+    @Delete
+    void resetAllImages(List<MainData> mainData);
 
     //Delete
     @Delete

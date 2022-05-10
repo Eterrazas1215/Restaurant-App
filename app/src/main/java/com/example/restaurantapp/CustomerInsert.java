@@ -33,7 +33,7 @@ public class CustomerInsert extends AppCompatActivity {
         editText = findViewById(R.id.edit_text);
         tableNum = findViewById(R.id.table);
         btnAdd = findViewById(R.id.btn_add);
-        btnReset = findViewById(R.id.btn_reset);
+//        btnReset = findViewById(R.id.btn_reset);
         btnMenu = findViewById(R.id.btn_menu);
         recyclerView = findViewById(R.id.recycler_view2);
 
@@ -78,17 +78,17 @@ public class CustomerInsert extends AppCompatActivity {
             }
         });
 
-        btnReset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Decline all data from database
-                database.customerDao().reset(dataList);
-                //Notify when all deleted
-                dataList.clear();
-                dataList.addAll(database.customerDao().getAll());
-                adapter.notifyDataSetChanged();
-            }
-        });
+//        btnReset.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //Decline all data from database
+//                database.customerDao().reset(dataList);
+//                //Notify when all deleted
+//                dataList.clear();
+//                dataList.addAll(database.customerDao().getAll());
+//                adapter.notifyDataSetChanged();
+//            }
+//        });
 
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
