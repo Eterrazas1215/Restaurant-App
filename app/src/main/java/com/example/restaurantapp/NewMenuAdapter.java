@@ -21,7 +21,9 @@ public class NewMenuAdapter extends RecyclerView.Adapter<NewMenuAdapter.ViewHold
     private List<MainData> dataList;
     private Activity context;
     private RoomDB database;
-    ImageBool pic;
+    EditText editText, priceText, descText;
+
+
     //create constructor
     public NewMenuAdapter(Activity context, List<MainData> dataList)
     {
@@ -46,7 +48,9 @@ public class NewMenuAdapter extends RecyclerView.Adapter<NewMenuAdapter.ViewHold
         //Initialize database
         database = RoomDB.getInstance(context);
         //Set text on text view
-        holder.textView.setText(data.getText());
+        String foodItem = data.getText()+" "+ data.getPrice()+" "+ data.getDescription();
+        holder.textView.setText(foodItem);
+
 
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +61,8 @@ public class NewMenuAdapter extends RecyclerView.Adapter<NewMenuAdapter.ViewHold
                 int sID = d.getId();
                 //Get text
                 String sText = d.getText();
+                String sPrice = d.getPrice();
+                String sDesc = d.getDescription();
 
                 //create dialog
                 Dialog dialog = new Dialog(context);
@@ -72,11 +78,15 @@ public class NewMenuAdapter extends RecyclerView.Adapter<NewMenuAdapter.ViewHold
                 dialog.show();
 
                 //initialize and assign variable
-                EditText editText = dialog.findViewById(R.id.edit_text);
+                editText = dialog.findViewById(R.id.edit_text);
+                priceText = dialog.findViewById(R.id.edit_price);
+                descText = dialog.findViewById(R.id.edit_description);
                 Button btnUpdate = dialog.findViewById(R.id.btn_update);
 
                 //set text on edit text
                 editText.setText(sText);
+                priceText.setText(sPrice);
+                descText.setText(sDesc);
 
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -85,8 +95,13 @@ public class NewMenuAdapter extends RecyclerView.Adapter<NewMenuAdapter.ViewHold
                         dialog.dismiss();
                         //Get updated text from edit text
                         String uText = editText.getText().toString().trim();
+                        String uPrice = priceText.getText().toString().trim();
+                        String uDesc = descText.getText().toString().trim();
+
+                        //fill alt data list
+
                         //Update text in database
-                        database.mainDao().update(sID,uText);
+                        database.mainDao().update(sID,uText,uPrice,uDesc);
                         //Notify when data is updated
                         dataList.clear();
                         dataList.addAll(database.mainDao().getAll());
@@ -113,16 +128,6 @@ public class NewMenuAdapter extends RecyclerView.Adapter<NewMenuAdapter.ViewHold
             }
         });
 
-        if(pic.isPic() == true) {
-            MainData d = dataList.get(holder.getAdapterPosition());
-            database.mainDao().insert(d);
-            holder.defaultImage.setImageResource(R.drawable.wings);
-        }
-        else
-        {
-            holder.defaultImage.setImageResource(R.drawable.ic_launcher_background);
-        }
-
 
 
     }
@@ -143,7 +148,7 @@ public class NewMenuAdapter extends RecyclerView.Adapter<NewMenuAdapter.ViewHold
             textView = itemView.findViewById(R.id.text_view);
             btnEdit = itemView.findViewById(R.id.btn_edit);
             btnDelete = itemView.findViewById(R.id.btn_delete);
-            defaultImage = itemView.findViewById(R.id.imageView2);
+            //defaultImage = itemView.findViewById(R.id.imageView2);
         }
     }
 }

@@ -6,6 +6,7 @@ import androidx.room.Database;
 import androidx.room.RoomDatabase;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
@@ -14,6 +15,7 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import java.io.IOException;
@@ -28,7 +30,6 @@ public class UploadImage extends AppCompatActivity{
     //constant to compare
     //the activity result
     int SELECT_PICTURE = 200;
-    ImageBool pic;
     private ArrayList<Object> bitMaps;
     byte [] imageSources;
 
@@ -47,16 +48,16 @@ public class UploadImage extends AppCompatActivity{
         loadImagesFromGallery();
     }
 
-    public void save(View view)
-    {
-        ImageData image = new ImageData();
-        image.setImages(ImageBitmapString.getStringFromBitmap(bitmap));
-        RoomDB.getInstance(getApplicationContext()).imageDao().insert(image);
-    }
     public void get(View view)
     {
-        pic.setPic(true);
-        startActivity(new Intent(UploadImage.this, NewInsertMenu.class));
+        ImageData image = new ImageData();
+        EditText foodName = findViewById(R.id.image_foodName);
+        String sText = foodName.getText().toString().trim();
+        image.setText(sText);
+        image.setImages(ImageBitmapString.getStringFromBitmap(bitmap));
+        RoomDB.getInstance(getApplicationContext()).imageDao().insert(image);
+        image.setText("");
+        startActivity(new Intent(UploadImage.this, ImageRecycler.class));
     }
 
     private void loadImagesFromGallery()

@@ -23,22 +23,22 @@
             android:maxHeight="100dp"
             android:scaleType="fitCenter"
             android:textSize="14sp"
-            android:translationX="130dp"
+            android:translationX="10dp"
             android:translationY="20dp" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:adjustViewBounds="true"
-            android:maxWidth="100dp"
-            android:maxHeight="100dp"
-            android:scaleType="fitCenter"
-            android:translationX="-180dp"
-            app:srcCompat="@drawable/ic_launcher_background"
+        <!--        <ImageView-->
+        <!--            android:id="@+id/imageView2"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_margin="3dp"-->
+        <!--            android:adjustViewBounds="true"-->
+        <!--            android:maxWidth="100dp"-->
+        <!--            android:maxHeight="100dp"-->
+        <!--            android:scaleType="fitCenter"-->
+        <!--            android:translationX="-180dp"-->
+        <!--            app:srcCompat="@drawable/ic_launcher_background"-->
 
-            />
+        <!--            />-->
 
         <ImageView
             android:id="@+id/btn_edit"
