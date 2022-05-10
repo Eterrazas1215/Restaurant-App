@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -14,13 +17,24 @@
         android:foreground="?selectableItemBackground"
         app:cardBackgroundColor="#edeae6"
         app:cardCornerRadius="12dp"
-        app:cardElevation="3dp" >
+        app:cardElevation="3dp">
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="378dp"
             android:layout_height="161dp"
             app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <Button
+            android:id="@+id/btn_image_delete"
+            android:layout_width="103dp"
+            android:layout_height="36dp"
+            android:text="Delete"
+            android:translationX="270dp"
+            android:translationY="120dp"
+
+            />
+
     </androidx.cardview.widget.CardView>
 
 

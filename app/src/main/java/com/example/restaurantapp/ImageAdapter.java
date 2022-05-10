@@ -5,6 +5,7 @@ import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.MyViewHolder
 {
     List arrayList;
     Context context;
+    private RoomDB db;
 
     public ImageAdapter(Context context, List arrayList)
     {
@@ -37,8 +39,26 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.MyViewHolder
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position)
     {
         ImageData images = (ImageData) arrayList.get(position);
+        db = RoomDB.getInstance(context);
         holder.imageView.setImageBitmap(ImageBitmapString.getBitmapFromStr(images.getImages()));
         images.setImages(images.getImages());
+
+
+        //btn delete
+        holder.btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ImageData d = (ImageData) arrayList.get(holder.getAdapterPosition());
+                db.imageDao().deleteImage(d);
+                int pos = holder.getAdapterPosition();
+                arrayList.remove(pos);
+                notifyItemRemoved(pos);
+                notifyItemRangeChanged(pos, arrayList.size());
+
+            }
+        });
+
     }
 
     @Override
@@ -50,10 +70,13 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.MyViewHolder
     static class MyViewHolder extends RecyclerView.ViewHolder
     {
         ImageView imageView;
+        Button btnDelete, btnReset;
+
         public MyViewHolder(@NonNull View itemView)
         {
             super(itemView);
             imageView = itemView.findViewById(R.id.imageView3);
+            btnDelete = itemView.findViewById(R.id.btn_image_delete);
         }
     }
 

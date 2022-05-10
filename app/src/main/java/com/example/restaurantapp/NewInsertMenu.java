@@ -33,7 +33,7 @@ public class NewInsertMenu extends AppCompatActivity{
         price = findViewById(R.id.price);
         description = findViewById(R.id.description);
         btnAdd = findViewById(R.id.btn_add);
-        btnReset = findViewById(R.id.btn_reset);
+//        btnReset = findViewById(R.id.btn_reset);
         btnImage = findViewById(R.id.btn_image);
         recyclerView = findViewById(R.id.recycler_view);
         //imageView = findViewById(R.id.imageView2);
@@ -85,17 +85,17 @@ public class NewInsertMenu extends AppCompatActivity{
             }
         });
 
-        btnReset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Decline all data from database
-                database.mainDao().reset(dataList);
-                //Notify when all deleted
-                dataList.clear();
-                dataList.addAll(database.mainDao().getAll());
-                adapter.notifyDataSetChanged();
-            }
-        });
+//        btnReset.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //Decline all data from database
+//                database.mainDao().reset(dataList);
+//                //Notify when all deleted
+//                dataList.clear();
+//                dataList.addAll(database.mainDao().getAll());
+//                adapter.notifyDataSetChanged();
+//            }
+//        });
 
         btnImage.setOnClickListener(new View.OnClickListener() {
             @Override

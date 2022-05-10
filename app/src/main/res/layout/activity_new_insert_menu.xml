@@ -51,13 +51,13 @@
             android:text="ADD"
             />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/btn_reset"
-            android:text="Reset"
-            />
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:id="@+id/btn_reset"-->
+<!--            android:text="Reset"-->
+<!--            />-->
         
         <Button
             android:layout_width="wrap_content"
