@@ -22,4 +22,14 @@ public interface ImageDao {
     //Update Query
     @Query("UPDATE images SET text = :sText WHERE ID = :sID ")
     void update(int sID, String sText);
+
+//    //Delete Query Images
+//    @Query("Delete From Images")
+//    List<ImageData>deleteAllImages();
+
+    //Delete
+    @Delete
+    void deleteImage(ImageData imageData);
+
+
 }
