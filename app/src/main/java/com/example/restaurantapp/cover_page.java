@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class cover_page extends AppCompatActivity {
-    public Button customer, owner,payment;
+    public Button customer, owner,payment,test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -18,6 +18,7 @@ public class cover_page extends AppCompatActivity {
         owner = findViewById(R.id.owner_bttn);
         customer = findViewById(R.id.customer_bttn);
         payment = findViewById(R.id.payment_bttn);
+        test = findViewById(R.id.test_bttn);
 
         customer.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -31,6 +32,13 @@ public class cover_page extends AppCompatActivity {
             public void onClick(View view){
                 Intent intent3 = new Intent(cover_page.this, Payment.class);
                 startActivity(intent3);
+            }
+        });
+        test.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent4 = new Intent(cover_page.this, foodmenu.class);
+                startActivity(intent4);
             }
         });
         owner.setOnClickListener(new View.OnClickListener(){

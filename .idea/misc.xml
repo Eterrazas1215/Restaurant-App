@@ -31,6 +31,22 @@
         <entry key="..\:/Users/ericl/OneDrive/Desktop/finally/RestaurantApp/Erics2/app/src/main/res/layout/menu_admin.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/ericl/OneDrive/Desktop/finally/RestaurantApp/Erics2/app/src/main/res/layout/new_customer_insert.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/ericl/OneDrive/Desktop/finally/RestaurantApp/Erics2/app/src/main/res/layout/saved_images.xml" value="0.34193840579710144" />
+        <entry key="..\:/Users/terra/AndroidStudioProjects/Restaurant-App/app/src/main/res/drawable/custom_black_button.xml" value="0.196" />
+        <entry key="..\:/Users/terra/AndroidStudioProjects/Restaurant-App/app/src/main/res/drawable/custom_white_button.xml" value="0.196" />
+        <entry key="..\:/Users/terra/AndroidStudioProjects/Restaurant-App/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1" />
+        <entry key="..\:/Users/terra/AndroidStudioProjects/Restaurant-App/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/terra/AndroidStudioProjects/Restaurant-App/app/src/main/res/layout/activity_menu_food.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/terra/AndroidStudioProjects/Restaurant-App/app/src/main/res/layout/cover_page.xml" value="0.25" />
+        <entry key="..\:/Users/terra/AndroidStudioProjects/Restaurant-App/app/src/main/res/layout/dialog_customer_update.xml" value="0.31476449275362317" />
+        <entry key="..\:/Users/terra/AndroidStudioProjects/Restaurant-App/app/src/main/res/layout/dialog_update.xml" value="0.31476449275362317" />
+        <entry key="..\:/Users/terra/AndroidStudioProjects/Restaurant-App/app/src/main/res/layout/foodmenu.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/terra/AndroidStudioProjects/Restaurant-App/app/src/main/res/layout/fragment_main.xml" value="0.31476449275362317" />
+        <entry key="..\:/Users/terra/AndroidStudioProjects/Restaurant-App/app/src/main/res/layout/grid_item.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/terra/AndroidStudioProjects/Restaurant-App/app/src/main/res/layout/image_row.xml" value="0.31476449275362317" />
+        <entry key="..\:/Users/terra/AndroidStudioProjects/Restaurant-App/app/src/main/res/layout/list_row_customer.xml" value="0.31476449275362317" />
+        <entry key="..\:/Users/terra/AndroidStudioProjects/Restaurant-App/app/src/main/res/layout/list_row_menu.xml" value="0.31476449275362317" />
+        <entry key="..\:/Users/terra/AndroidStudioProjects/Restaurant-App/app/src/main/res/layout/new_customer_insert.xml" value="0.1" />
+        <entry key="..\:/Users/terra/AndroidStudioProjects/Restaurant-App/app/src/main/res/layout/payment_page.xml" value="0.31476449275362317" />
         <entry key="..\:/Users/terra/StudioProjects/Restaurant-App/app/src/main/res/drawable/wings.xml" value="0.1675" />
       </map>
     </option>
