@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Brian/Restaurant-App/app/src/main/res/layout/customer_image_recycler.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Brian/Restaurant-App/app/src/main/res/layout/customer_menu_row.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Brian/Restaurant-App/app/src/main/res/layout/database_menu_selection_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Brian/Restaurant-App/app/src/main/res/layout/drinks_menu.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Brian/Restaurant-App/app/src/main/res/layout/foodmenu.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Brian/Restaurant-App/app/src/main/res/layout/item_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Brian/Restaurant-App/app/src/main/res/layout/new_customer_insert.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/ericl/OneDrive/Desktop/finally/RestaurantApp/Erics2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.204" />
         <entry key="..\:/Users/ericl/OneDrive/Desktop/finally/RestaurantApp/Erics2/app/src/main/res/drawable/ic_baseline_person_outline_24.xml" value="0.204" />
         <entry key="..\:/Users/ericl/OneDrive/Desktop/finally/RestaurantApp/Erics2/app/src/main/res/drawable/ic_delete.xml" value="0.204" />
@@ -41,8 +48,6 @@
         <entry key="..\:/Users/ericl/cs441/Restaurant-App/app/src/main/res/layout/appetizer_list_row_menu.xml" value="0.3625" />
         <entry key="..\:/Users/ericl/cs441/Restaurant-App/app/src/main/res/layout/appetizer_menu.xml" value="0.3625" />
         <entry key="..\:/Users/ericl/cs441/Restaurant-App/app/src/main/res/layout/cover_page.xml" value="0.3625" />
-        <entry key="..\:/Users/ericl/cs441/Restaurant-App/app/src/main/res/layout/customer_image_recycler.xml" value="0.3482789855072464" />
-        <entry key="..\:/Users/ericl/cs441/Restaurant-App/app/src/main/res/layout/customer_menu_row.xml" value="0.3482789855072464" />
         <entry key="..\:/Users/ericl/cs441/Restaurant-App/app/src/main/res/layout/database_menu_selection_layout.xml" value="0.3625" />
         <entry key="..\:/Users/ericl/cs441/Restaurant-App/app/src/main/res/layout/dessert_dialog_update.xml" value="0.3625" />
         <entry key="..\:/Users/ericl/cs441/Restaurant-App/app/src/main/res/layout/dessert_list_row_menu.xml" value="0.3625" />
