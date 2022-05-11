@@ -1,0 +1,30 @@
+package com.example.restaurantapp;
+
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
+
+public class CustomerImageRecycler extends AppCompatActivity {
+    RecyclerView recyclerView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.customer_image_recycler);
+        recyclerView = findViewById(R.id.customer_menu_recycler);
+        List<ImageData> images = RoomDB.getInstance(getApplicationContext()).imageDao().getAllImage();
+        CustomerImageAdapter adapter = new CustomerImageAdapter(getApplicationContext(), images);
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(adapter);
+
+    }
+}

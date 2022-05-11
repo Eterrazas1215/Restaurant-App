@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RestaurantApp">
         <activity
+            android:name=".CustomerImageRecycler"
+            android:exported="false"/>
+        <activity
             android:name=".DrinksInsert"
             android:exported="false"/>
         <activity

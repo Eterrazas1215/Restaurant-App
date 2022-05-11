@@ -20,7 +20,7 @@ public class item_menu extends AppCompatActivity {
         food.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(item_menu.this, foodmenu.class);
+                Intent intent = new Intent(item_menu.this, CustomerImageRecycler.class);
                 startActivity(intent);
             }
         });
