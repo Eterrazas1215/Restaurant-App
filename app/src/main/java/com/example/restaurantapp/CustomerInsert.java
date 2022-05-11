@@ -93,7 +93,7 @@ public class CustomerInsert extends AppCompatActivity {
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CustomerInsert.this, item_menu.class);
+                Intent intent = new Intent(CustomerInsert.this, CustomerImageRecycler.class);
                 startActivity(intent);
             }
         });
