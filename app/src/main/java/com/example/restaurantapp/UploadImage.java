@@ -74,7 +74,7 @@ public class UploadImage extends AppCompatActivity{
         {
             if(requestCode == SELECT_PICTURE)
             {
-                //get url of the image from data
+                //get uri of the image from data
                 Uri selectedImageUri = data.getData();
                 if(null != selectedImageUri)
                 {
