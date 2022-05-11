@@ -28,6 +28,5 @@ public class ImageRecycler extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
 
-
     }
 }
