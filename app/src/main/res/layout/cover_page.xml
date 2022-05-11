@@ -29,18 +29,6 @@
         app:layout_constraintVertical_bias="0.646" />
 
     <Button
-        android:id="@+id/test_bttn"
-        android:layout_width="130dp"
-        android:layout_height="74dp"
-        android:text="Test"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.202"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.782" />
-
-    <Button
         android:id="@+id/customer_bttn"
         android:layout_width="130dp"
         android:layout_height="74dp"
