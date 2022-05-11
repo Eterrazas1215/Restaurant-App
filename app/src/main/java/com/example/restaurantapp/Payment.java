@@ -1,5 +1,6 @@
 package com.example.restaurantapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -22,9 +23,11 @@ public class Payment extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // after clicking on pay we are displaying toast message as card added.
-                Toast.makeText(Payment.this, "Payment Received", Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(Payment.this, "Payment Received. Have a good day!", Toast.LENGTH_LONG).show();
+                Intent intent3 = new Intent(Payment.this, CustomerImageRecycler.class);
+                startActivity(intent3);
             }
+
 
         });
     }
