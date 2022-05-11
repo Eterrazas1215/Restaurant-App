@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -43,6 +44,10 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.MyViewHolder
         holder.imageView.setImageBitmap(ImageBitmapString.getBitmapFromStr(images.getImages()));
         images.setImages(images.getImages());
 
+        String iText = images.getText();
+        holder.foodName.setText(iText);
+
+
 
         //btn delete
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
@@ -71,12 +76,14 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.MyViewHolder
     {
         ImageView imageView;
         Button btnDelete, btnReset;
+        EditText foodName;
 
         public MyViewHolder(@NonNull View itemView)
         {
             super(itemView);
             imageView = itemView.findViewById(R.id.imageView3);
             btnDelete = itemView.findViewById(R.id.btn_image_delete);
+            foodName = itemView.findViewById(R.id.edit_text);
         }
     }
 

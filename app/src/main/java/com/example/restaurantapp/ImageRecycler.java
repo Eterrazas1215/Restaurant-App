@@ -2,6 +2,7 @@ package com.example.restaurantapp;
 
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,8 +21,10 @@ public class ImageRecycler extends AppCompatActivity {
 
         setContentView(R.layout.activity_image_recycler);
         recyclerView = findViewById(R.id.rr);
+
         List<ImageData> images = RoomDB.getInstance(getApplicationContext()).imageDao().getAllImage();
         ImageAdapter adapter = new ImageAdapter(getApplicationContext(), images);
+
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
