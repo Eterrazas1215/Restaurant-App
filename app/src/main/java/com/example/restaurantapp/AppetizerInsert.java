@@ -16,7 +16,7 @@ import java.util.List;
 public class AppetizerInsert extends AppCompatActivity{
     //initialize variables
     EditText editText, price, description;
-    Button btnAdd,btnReset, btnImage;
+    Button btnAdd,btnReset, btnImage, btnItems;
     RecyclerView recyclerView;
     List<AppetizerData> dataList = new ArrayList<>();
     LinearLayoutManager linearLayoutManager;
@@ -34,6 +34,7 @@ public class AppetizerInsert extends AppCompatActivity{
         btnAdd = findViewById(R.id.appetizer_btn_add);
 //        btnReset = findViewById(R.id.btn_reset);
         btnImage = findViewById(R.id.appetizer_btn_image);
+        btnItems = findViewById(R.id.btn_items);
         recyclerView = findViewById(R.id.appetizer_recycler_view);
         //imageView = findViewById(R.id.imageView2);
 
@@ -84,6 +85,14 @@ public class AppetizerInsert extends AppCompatActivity{
             }
         });
 
+
+        btnItems.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AppetizerInsert.this, ImageRecycler.class);
+                startActivity(intent);
+            }
+        });
 //        btnReset.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
