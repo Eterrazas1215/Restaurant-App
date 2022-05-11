@@ -17,7 +17,7 @@ import java.util.List;
 public class NewInsertMenu extends AppCompatActivity{
     //initialize variables
     EditText editText, price, description;
-    Button btnAdd,btnReset, btnImage;
+    Button btnAdd,btnReset, btnImage, btnItems;
     RecyclerView recyclerView;
     List<MainData> dataList = new ArrayList<>();
     LinearLayoutManager linearLayoutManager;
@@ -35,6 +35,7 @@ public class NewInsertMenu extends AppCompatActivity{
         btnAdd = findViewById(R.id.btn_add);
 //        btnReset = findViewById(R.id.btn_reset);
         btnImage = findViewById(R.id.btn_image);
+        btnItems = findViewById(R.id.btn_items);
         recyclerView = findViewById(R.id.recycler_view);
         //imageView = findViewById(R.id.imageView2);
 
@@ -82,6 +83,14 @@ public class NewInsertMenu extends AppCompatActivity{
                     dataList.addAll(database.mainDao().getAll());
                     adapter.notifyDataSetChanged();
                 }
+            }
+        });
+
+        btnItems.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NewInsertMenu.this, ImageRecycler.class);
+                startActivity(intent);
             }
         });
 
