@@ -37,7 +37,7 @@ public class cover_page extends AppCompatActivity {
         test.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent4 = new Intent(cover_page.this, item_menu.class);
+                Intent intent4 = new Intent(cover_page.this,ImageRecycler.class);
                 startActivity(intent4);
             }
         });
